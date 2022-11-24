@@ -97,6 +97,9 @@ return packer.startup(function(use)
 
 	use({ 'monsonjeremy/onedark.nvim', branch = 'treesitter' })
 
+	-- Prettier
+	use { "MunifTanjim/prettier.nvim" }
+
 	if PACKER_BOOTSTRAP then
 		require("packer").sync()
 	end
