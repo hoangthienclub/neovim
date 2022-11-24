@@ -10,6 +10,7 @@ end
 
 local tree_cb = nvim_tree_config.nvim_tree_callback
 vim.cmd([[ highlight NvimTreeIndentMarker guifg=#3FC5FF ]])
+vim.cmd[[hi NvimTreeNormal guibg=NONE ctermbg=NONE]]
 nvim_tree.setup {
   update_focused_file = {
     enable = true,
