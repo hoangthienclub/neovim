@@ -99,6 +99,9 @@ return packer.startup(function(use)
 
 	-- Prettier
 	use { "MunifTanjim/prettier.nvim" }
+	--
+    use { "folke/zen-mode.nvim" }
+    use { "folke/twilight.nvim" }
 
 	if PACKER_BOOTSTRAP then
 		require("packer").sync()

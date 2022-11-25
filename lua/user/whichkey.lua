@@ -140,7 +140,7 @@ local mappings = {
       "<cmd>Telescope diagnostics<cr>",
       "Workspace Diagnostics",
     },
-    f = { "<cmd>:Prettier<CR>", "Format" },
+    f = { "<cmd>:Prettier<cr>", "Format" },
     -- f = { "<cmd>lua vim.lsp.buf.format{async=true}<cr>", "Format" },
     i = { "<cmd>LspInfo<cr>", "Info" },
     I = { "<cmd>LspInstallInfo<cr>", "Installer Info" },
@@ -198,8 +198,13 @@ local mappings = {
     f = { "<cmd>ToggleTerm direction=float<cr>", "Float" },
     h = { "<cmd>ToggleTerm size=10 direction=horizontal<cr>", "Horizontal" },
     v = { "<cmd>ToggleTerm size=60 direction=vertical<cr>", "Vertical" },
-  }
-  
+  },
+
+  z = {
+    name = "Focus",
+    z = { ":ZenMode<cr>", "Toggle Zen Mode" },
+    t = { ":Twilight<cr>", "Toggle Twilight" }
+  }, 
 }
 
 which_key.setup(setup)
