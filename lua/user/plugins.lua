@@ -42,20 +42,21 @@ packer.init({
 return packer.startup(function(use)
   use { "wbthomason/packer.nvim" } -- Have packer manage itself
   use { "nvim-lua/plenary.nvim" } -- Useful lua functions used by lots of plugins
-  use { "windwp/nvim-autopairs" } -- Autopairs, integrates with both cmp and treesitter
-  use { "numToStr/Comment.nvim" }
+  use { "windwp/nvim-autopairs", config = "require('configs/autopairs')" } -- Autopairs, integrates with both cmp and treesitter
+
+  use { "numToStr/Comment.nvim", config = "require('configs/comment')" }
   use { "JoosepAlviste/nvim-ts-context-commentstring" }
   use { "kyazdani42/nvim-web-devicons" }
-  use { "kyazdani42/nvim-tree.lua" }
-  use { "akinsho/bufferline.nvim" }
+  use { "kyazdani42/nvim-tree.lua", config = "require('configs/nvim-tree')" }
+  use { "akinsho/bufferline.nvim", config = "require('configs/bufferline')" }
 	use { "moll/vim-bbye" }
-  use { "nvim-lualine/lualine.nvim" }
-  use { "akinsho/toggleterm.nvim" }
-  use { "ahmedkhalf/project.nvim" }
-  use { "lewis6991/impatient.nvim" }
-  use { "lukas-reineke/indent-blankline.nvim" }
-  use { "goolord/alpha-nvim" }
-	use {"folke/which-key.nvim"}
+  use { "nvim-lualine/lualine.nvim", config = "require('configs/lualine')" }
+  use { "akinsho/toggleterm.nvim", config = "require('configs/toggleterm')" }
+  use { "ahmedkhalf/project.nvim", config = "require('configs/project')"  }
+  use { "lewis6991/impatient.nvim", config = "require('configs/impatient')" }
+  use { "lukas-reineke/indent-blankline.nvim", config = "require('configs/indentline')" }
+  use { "goolord/alpha-nvim", config = "require('configs/alpha')" }
+	use {"folke/which-key.nvim", config = "require('configs/whichkey')" }
 
 	-- Colorschemes
   use { "folke/tokyonight.nvim" }
@@ -81,27 +82,26 @@ return packer.startup(function(use)
   use { "RRethy/vim-illuminate" }
 
 	-- Telescope
-	use { "nvim-telescope/telescope.nvim" }
+	use { "nvim-telescope/telescope.nvim", config = "require('configs/telescope')" }
 
 	-- Treesitter
-	use {
-		"nvim-treesitter/nvim-treesitter",
+	use { "nvim-treesitter/nvim-treesitter", config = "require('configs/treesitter')"
 	}
 
 	-- Git
-	use { "lewis6991/gitsigns.nvim" }
-	use { "xiyaowong/nvim-transparent" }
+	use { "lewis6991/gitsigns.nvim", config = "require('configs/gitsigns')" }
+	use { "xiyaowong/nvim-transparent", config = "require('configs/transparent')" }
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
 
-	use({ 'monsonjeremy/onedark.nvim', branch = 'treesitter' })
+	use({ 'monsonjeremy/onedark.nvim', branch = 'treesitter', config = "require('configs/colorscheme')" })
 
 	-- Prettier
 	use { "MunifTanjim/prettier.nvim" }
 	--
-    use { "folke/zen-mode.nvim" }
-    use { "folke/twilight.nvim" }
+    use { "folke/zen-mode.nvim", config = "require('configs/zen-mode')" }
+    use { "folke/twilight.nvim", config = "require('configs/twilight')" }
 
     use { "nvim-telescope/telescope-file-browser.nvim" }
 

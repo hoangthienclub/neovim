@@ -75,6 +75,7 @@ time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
   ["Comment.nvim"] = {
+    config = { "require('configs/comment')" },
     loaded = true,
     path = "/Users/tranthien/.local/share/nvim/site/pack/packer/start/Comment.nvim",
     url = "https://github.com/numToStr/Comment.nvim"
@@ -85,11 +86,13 @@ _G.packer_plugins = {
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
   ["alpha-nvim"] = {
+    config = { "require('configs/alpha')" },
     loaded = true,
     path = "/Users/tranthien/.local/share/nvim/site/pack/packer/start/alpha-nvim",
     url = "https://github.com/goolord/alpha-nvim"
   },
   ["bufferline.nvim"] = {
+    config = { "require('configs/bufferline')" },
     loaded = true,
     path = "/Users/tranthien/.local/share/nvim/site/pack/packer/start/bufferline.nvim",
     url = "https://github.com/akinsho/bufferline.nvim"
@@ -130,21 +133,25 @@ _G.packer_plugins = {
     url = "https://github.com/rafamadriz/friendly-snippets"
   },
   ["gitsigns.nvim"] = {
+    config = { "require('configs/gitsigns')" },
     loaded = true,
     path = "/Users/tranthien/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
     url = "https://github.com/lewis6991/gitsigns.nvim"
   },
   ["impatient.nvim"] = {
+    config = { "require('configs/impatient')" },
     loaded = true,
     path = "/Users/tranthien/.local/share/nvim/site/pack/packer/start/impatient.nvim",
     url = "https://github.com/lewis6991/impatient.nvim"
   },
   ["indent-blankline.nvim"] = {
+    config = { "require('configs/indentline')" },
     loaded = true,
     path = "/Users/tranthien/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim",
     url = "https://github.com/lukas-reineke/indent-blankline.nvim"
   },
   ["lualine.nvim"] = {
+    config = { "require('configs/lualine')" },
     loaded = true,
     path = "/Users/tranthien/.local/share/nvim/site/pack/packer/start/lualine.nvim",
     url = "https://github.com/nvim-lualine/lualine.nvim"
@@ -165,6 +172,7 @@ _G.packer_plugins = {
     url = "https://github.com/jose-elias-alvarez/null-ls.nvim"
   },
   ["nvim-autopairs"] = {
+    config = { "require('configs/autopairs')" },
     loaded = true,
     path = "/Users/tranthien/.local/share/nvim/site/pack/packer/start/nvim-autopairs",
     url = "https://github.com/windwp/nvim-autopairs"
@@ -180,16 +188,19 @@ _G.packer_plugins = {
     url = "https://github.com/neovim/nvim-lspconfig"
   },
   ["nvim-transparent"] = {
+    config = { "require('configs/transparent')" },
     loaded = true,
     path = "/Users/tranthien/.local/share/nvim/site/pack/packer/start/nvim-transparent",
     url = "https://github.com/xiyaowong/nvim-transparent"
   },
   ["nvim-tree.lua"] = {
+    config = { "require('configs/nvim-tree')" },
     loaded = true,
     path = "/Users/tranthien/.local/share/nvim/site/pack/packer/start/nvim-tree.lua",
     url = "https://github.com/kyazdani42/nvim-tree.lua"
   },
   ["nvim-treesitter"] = {
+    config = { "require('configs/treesitter')" },
     loaded = true,
     path = "/Users/tranthien/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
     url = "https://github.com/nvim-treesitter/nvim-treesitter"
@@ -205,6 +216,7 @@ _G.packer_plugins = {
     url = "https://github.com/kyazdani42/nvim-web-devicons"
   },
   ["onedark.nvim"] = {
+    config = { "require('configs/colorscheme')" },
     loaded = true,
     path = "/Users/tranthien/.local/share/nvim/site/pack/packer/start/onedark.nvim",
     url = "https://github.com/monsonjeremy/onedark.nvim"
@@ -225,6 +237,7 @@ _G.packer_plugins = {
     url = "https://github.com/MunifTanjim/prettier.nvim"
   },
   ["project.nvim"] = {
+    config = { "require('configs/project')" },
     loaded = true,
     path = "/Users/tranthien/.local/share/nvim/site/pack/packer/start/project.nvim",
     url = "https://github.com/ahmedkhalf/project.nvim"
@@ -235,11 +248,13 @@ _G.packer_plugins = {
     url = "https://github.com/nvim-telescope/telescope-file-browser.nvim"
   },
   ["telescope.nvim"] = {
+    config = { "require('configs/telescope')" },
     loaded = true,
     path = "/Users/tranthien/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
   ["toggleterm.nvim"] = {
+    config = { "require('configs/toggleterm')" },
     loaded = true,
     path = "/Users/tranthien/.local/share/nvim/site/pack/packer/start/toggleterm.nvim",
     url = "https://github.com/akinsho/toggleterm.nvim"
@@ -265,6 +280,7 @@ _G.packer_plugins = {
     url = "https://github.com/RRethy/vim-illuminate"
   },
   ["which-key.nvim"] = {
+    config = { "require('configs/whichkey')" },
     loaded = true,
     path = "/Users/tranthien/.local/share/nvim/site/pack/packer/start/which-key.nvim",
     url = "https://github.com/folke/which-key.nvim"
@@ -277,6 +293,70 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
+-- Config for: onedark.nvim
+time([[Config for onedark.nvim]], true)
+require('configs/colorscheme')
+time([[Config for onedark.nvim]], false)
+-- Config for: telescope.nvim
+time([[Config for telescope.nvim]], true)
+require('configs/telescope')
+time([[Config for telescope.nvim]], false)
+-- Config for: nvim-transparent
+time([[Config for nvim-transparent]], true)
+require('configs/transparent')
+time([[Config for nvim-transparent]], false)
+-- Config for: which-key.nvim
+time([[Config for which-key.nvim]], true)
+require('configs/whichkey')
+time([[Config for which-key.nvim]], false)
+-- Config for: toggleterm.nvim
+time([[Config for toggleterm.nvim]], true)
+require('configs/toggleterm')
+time([[Config for toggleterm.nvim]], false)
+-- Config for: nvim-tree.lua
+time([[Config for nvim-tree.lua]], true)
+require('configs/nvim-tree')
+time([[Config for nvim-tree.lua]], false)
+-- Config for: bufferline.nvim
+time([[Config for bufferline.nvim]], true)
+require('configs/bufferline')
+time([[Config for bufferline.nvim]], false)
+-- Config for: impatient.nvim
+time([[Config for impatient.nvim]], true)
+require('configs/impatient')
+time([[Config for impatient.nvim]], false)
+-- Config for: nvim-treesitter
+time([[Config for nvim-treesitter]], true)
+require('configs/treesitter')
+time([[Config for nvim-treesitter]], false)
+-- Config for: nvim-autopairs
+time([[Config for nvim-autopairs]], true)
+require('configs/autopairs')
+time([[Config for nvim-autopairs]], false)
+-- Config for: indent-blankline.nvim
+time([[Config for indent-blankline.nvim]], true)
+require('configs/indentline')
+time([[Config for indent-blankline.nvim]], false)
+-- Config for: project.nvim
+time([[Config for project.nvim]], true)
+require('configs/project')
+time([[Config for project.nvim]], false)
+-- Config for: alpha-nvim
+time([[Config for alpha-nvim]], true)
+require('configs/alpha')
+time([[Config for alpha-nvim]], false)
+-- Config for: lualine.nvim
+time([[Config for lualine.nvim]], true)
+require('configs/lualine')
+time([[Config for lualine.nvim]], false)
+-- Config for: Comment.nvim
+time([[Config for Comment.nvim]], true)
+require('configs/comment')
+time([[Config for Comment.nvim]], false)
+-- Config for: gitsigns.nvim
+time([[Config for gitsigns.nvim]], true)
+require('configs/gitsigns')
+time([[Config for gitsigns.nvim]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then
