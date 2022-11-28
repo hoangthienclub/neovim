@@ -103,6 +103,8 @@ return packer.startup(function(use)
     use { "folke/zen-mode.nvim" }
     use { "folke/twilight.nvim" }
 
+    use { "nvim-telescope/telescope-file-browser.nvim" }
+
 	if PACKER_BOOTSTRAP then
 		require("packer").sync()
 	end
