@@ -8,7 +8,7 @@ zenMode.setup {
     height = 0.9,
   },
   plugins = {
-    twilight = {enabled = true},
+    twilight = {enabled = false},
     kitty = {
       enabled = false,
       font = "+4", -- font size increment
