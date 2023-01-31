@@ -104,9 +104,8 @@ return packer.startup(function(use)
     use { "folke/twilight.nvim", config = "require('configs/twilight')" }
 
     use { "nvim-telescope/telescope-file-browser.nvim" }
-
+    use {'iamcco/markdown-preview.nvim'}
 	-- use({ 'TimUntersberger/neogit', requires = 'nvim-lua/plenary.nvim', config = "require('configs/neogit')" })
-
 	if PACKER_BOOTSTRAP then
 		require("packer").sync()
 	end
