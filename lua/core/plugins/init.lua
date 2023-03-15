@@ -131,6 +131,7 @@ return packer.startup(
         })
 
         -- use({ 'TimUntersberger/neogit', requires = 'nvim-lua/plenary.nvim', config = "require('configs/neogit')" })
+        use 'adelarsq/neoline.vim'
         if PACKER_BOOTSTRAP then
             require("packer").sync()
         end
