@@ -115,8 +115,8 @@ return packer.startup(
         use {"iamcco/markdown-preview.nvim"}
 
         -- Themes
-        use {"catppuccin/nvim", as = "catppuccin", config = "require('configs/catppuccin')"}
-        -- use({"monsonjeremy/onedark.nvim", branch = "treesitter", config = "require('configs/colorscheme')"})
+        -- use {"catppuccin/nvim", as = "catppuccin", config = "require('configs/catppuccin')"}
+        use({"monsonjeremy/onedark.nvim", branch = "treesitter", config = "require('configs/colorscheme')"})
 
         --
         use({
@@ -130,9 +130,13 @@ return packer.startup(
             config = "require('configs/nvim-web-devicons')"
         })
 
-        -- use({ 'TimUntersberger/neogit', requires = 'nvim-lua/plenary.nvim', config = "require('configs/neogit')" })
+        use({ 'TimUntersberger/neogit', requires = 'nvim-lua/plenary.nvim', config = "require('configs/neogit')" })
         use 'adelarsq/neoline.vim'
         use {'ojroques/nvim-hardline', config = "require('configs/nvim-hardline')"}
+
+        use {
+            'jghauser/mkdir.nvim'
+        }
         if PACKER_BOOTSTRAP then
             require("packer").sync()
         end

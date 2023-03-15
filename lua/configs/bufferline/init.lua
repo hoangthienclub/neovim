@@ -13,7 +13,7 @@ bufferline.setup {
     -- NOTE: this plugin is designed with this icon in mind,
     -- and so changing this is NOT recommended, this is intended
     -- as an escape hatch for people who cannot bear it for whatever reason
-	indicator_icon = nil,
+  indicator_icon = nil,
     indicator = { style = "icon", icon = "▎"},
     buffer_close_icon = "",
     -- buffer_close_icon = '',
@@ -37,9 +37,13 @@ bufferline.setup {
     tab_size = 21,
     diagnostics = false, -- | "nvim_lsp" | "coc",
     diagnostics_update_in_insert = false,
-    -- diagnostics_indicator = function(count, level, diagnostics_dict, context)
-    --   return "("..count..")"
-    -- end,
+    diagnostics_indicator = function(count, level, diagnostics_dict, context)
+      if context.buffer:current() then
+        return ''
+      end
+    
+      return ''
+    end,
     -- NOTE: this will be called a lot so don't do any heavy processing here
     -- custom_filter = function(buf_number)
     --   -- filter out filetypes you don't want to see
