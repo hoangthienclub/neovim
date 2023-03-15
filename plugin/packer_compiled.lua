@@ -91,11 +91,25 @@ _G.packer_plugins = {
     path = "/Users/tranthien/.local/share/nvim/site/pack/packer/start/alpha-nvim",
     url = "https://github.com/goolord/alpha-nvim"
   },
+  ["barbecue.nvim"] = {
+    config = { "require('configs/nvim-web-devicons')" },
+    load_after = {},
+    loaded = true,
+    needs_bufread = false,
+    path = "/Users/tranthien/.local/share/nvim/site/pack/packer/opt/barbecue.nvim",
+    url = "https://github.com/utilyre/barbecue.nvim"
+  },
   ["bufferline.nvim"] = {
     config = { "require('configs/bufferline')" },
     loaded = true,
     path = "/Users/tranthien/.local/share/nvim/site/pack/packer/start/bufferline.nvim",
     url = "https://github.com/akinsho/bufferline.nvim"
+  },
+  catppuccin = {
+    config = { "require('configs/catppuccin')" },
+    loaded = true,
+    path = "/Users/tranthien/.local/share/nvim/site/pack/packer/start/catppuccin",
+    url = "https://github.com/catppuccin/nvim"
   },
   ["cmp-buffer"] = {
     loaded = true,
@@ -192,6 +206,11 @@ _G.packer_plugins = {
     path = "/Users/tranthien/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
   },
+  ["nvim-navic"] = {
+    loaded = true,
+    path = "/Users/tranthien/.local/share/nvim/site/pack/packer/start/nvim-navic",
+    url = "https://github.com/SmiteshP/nvim-navic"
+  },
   ["nvim-transparent"] = {
     config = { "require('configs/transparent')" },
     loaded = true,
@@ -219,12 +238,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/tranthien/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
     url = "https://github.com/kyazdani42/nvim-web-devicons"
-  },
-  ["onedark.nvim"] = {
-    config = { "require('configs/colorscheme')" },
-    loaded = true,
-    path = "/Users/tranthien/.local/share/nvim/site/pack/packer/start/onedark.nvim",
-    url = "https://github.com/monsonjeremy/onedark.nvim"
   },
   ["packer.nvim"] = {
     loaded = true,
@@ -300,6 +313,22 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
+-- Config for: toggleterm.nvim
+time([[Config for toggleterm.nvim]], true)
+require('configs/toggleterm')
+time([[Config for toggleterm.nvim]], false)
+-- Config for: nvim-transparent
+time([[Config for nvim-transparent]], true)
+require('configs/transparent')
+time([[Config for nvim-transparent]], false)
+-- Config for: nvim-tree.lua
+time([[Config for nvim-tree.lua]], true)
+require('configs/nvim-tree')
+time([[Config for nvim-tree.lua]], false)
+-- Config for: twilight.nvim
+time([[Config for twilight.nvim]], true)
+require('configs/twilight')
+time([[Config for twilight.nvim]], false)
 -- Config for: nvim-treesitter
 time([[Config for nvim-treesitter]], true)
 require('configs/treesitter')
@@ -308,62 +337,14 @@ time([[Config for nvim-treesitter]], false)
 time([[Config for gitsigns.nvim]], true)
 require('configs/gitsigns')
 time([[Config for gitsigns.nvim]], false)
--- Config for: Comment.nvim
-time([[Config for Comment.nvim]], true)
-require('configs/comment')
-time([[Config for Comment.nvim]], false)
--- Config for: nvim-transparent
-time([[Config for nvim-transparent]], true)
-require('configs/transparent')
-time([[Config for nvim-transparent]], false)
--- Config for: telescope.nvim
-time([[Config for telescope.nvim]], true)
-require('configs/telescope')
-time([[Config for telescope.nvim]], false)
--- Config for: alpha-nvim
-time([[Config for alpha-nvim]], true)
-require('configs/alpha')
-time([[Config for alpha-nvim]], false)
--- Config for: onedark.nvim
-time([[Config for onedark.nvim]], true)
-require('configs/colorscheme')
-time([[Config for onedark.nvim]], false)
 -- Config for: which-key.nvim
 time([[Config for which-key.nvim]], true)
 require('configs/whichkey')
 time([[Config for which-key.nvim]], false)
--- Config for: indent-blankline.nvim
-time([[Config for indent-blankline.nvim]], true)
-require('configs/indentline')
-time([[Config for indent-blankline.nvim]], false)
--- Config for: project.nvim
-time([[Config for project.nvim]], true)
-require('configs/project')
-time([[Config for project.nvim]], false)
--- Config for: impatient.nvim
-time([[Config for impatient.nvim]], true)
-require('configs/impatient')
-time([[Config for impatient.nvim]], false)
--- Config for: nvim-tree.lua
-time([[Config for nvim-tree.lua]], true)
-require('configs/nvim-tree')
-time([[Config for nvim-tree.lua]], false)
--- Config for: toggleterm.nvim
-time([[Config for toggleterm.nvim]], true)
-require('configs/toggleterm')
-time([[Config for toggleterm.nvim]], false)
--- Config for: twilight.nvim
-time([[Config for twilight.nvim]], true)
-require('configs/twilight')
-time([[Config for twilight.nvim]], false)
 -- Config for: zen-mode.nvim
 time([[Config for zen-mode.nvim]], true)
 require('configs/zen-mode')
 time([[Config for zen-mode.nvim]], false)
--- Config for: lualine.nvim
-time([[Config for lualine.nvim]], true)
-require('configs/lualine')
-time([[Config for lualine.nvim]], false)
 -- Config for: bufferline.nvim
 time([[Config for bufferline.nvim]], true)
 require('configs/bufferline')
@@ -372,6 +353,47 @@ time([[Config for bufferline.nvim]], false)
 time([[Config for nvim-autopairs]], true)
 require('configs/autopairs')
 time([[Config for nvim-autopairs]], false)
+-- Config for: project.nvim
+time([[Config for project.nvim]], true)
+require('configs/project')
+time([[Config for project.nvim]], false)
+-- Config for: catppuccin
+time([[Config for catppuccin]], true)
+require('configs/catppuccin')
+time([[Config for catppuccin]], false)
+-- Config for: alpha-nvim
+time([[Config for alpha-nvim]], true)
+require('configs/alpha')
+time([[Config for alpha-nvim]], false)
+-- Config for: impatient.nvim
+time([[Config for impatient.nvim]], true)
+require('configs/impatient')
+time([[Config for impatient.nvim]], false)
+-- Config for: lualine.nvim
+time([[Config for lualine.nvim]], true)
+require('configs/lualine')
+time([[Config for lualine.nvim]], false)
+-- Config for: telescope.nvim
+time([[Config for telescope.nvim]], true)
+require('configs/telescope')
+time([[Config for telescope.nvim]], false)
+-- Config for: indent-blankline.nvim
+time([[Config for indent-blankline.nvim]], true)
+require('configs/indentline')
+time([[Config for indent-blankline.nvim]], false)
+-- Config for: Comment.nvim
+time([[Config for Comment.nvim]], true)
+require('configs/comment')
+time([[Config for Comment.nvim]], false)
+-- Load plugins in order defined by `after`
+time([[Sequenced loading]], true)
+vim.cmd [[ packadd nvim-web-devicons ]]
+vim.cmd [[ packadd barbecue.nvim ]]
+
+-- Config for: barbecue.nvim
+require('configs/nvim-web-devicons')
+
+time([[Sequenced loading]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then

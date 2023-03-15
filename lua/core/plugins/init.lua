@@ -105,8 +105,6 @@ return packer.startup(
         -- Automatically set up your configuration after cloning packer.nvim
         -- Put this at the end after all plugins
 
-        use({"monsonjeremy/onedark.nvim", branch = "treesitter", config = "require('configs/colorscheme')"})
-
         -- Prettier
         use {"MunifTanjim/prettier.nvim"}
         --
@@ -115,6 +113,23 @@ return packer.startup(
 
         use {"nvim-telescope/telescope-file-browser.nvim"}
         use {"iamcco/markdown-preview.nvim"}
+
+        -- Themes
+        use {"catppuccin/nvim", as = "catppuccin", config = "require('configs/catppuccin')"}
+        -- use({"monsonjeremy/onedark.nvim", branch = "treesitter", config = "require('configs/colorscheme')"})
+
+        --
+        use({
+            "utilyre/barbecue.nvim",
+            tag = "*",
+            requires = {
+                "SmiteshP/nvim-navic",
+                "nvim-tree/nvim-web-devicons", -- optional dependency
+            },
+            after = "nvim-web-devicons", -- keep this if you're using NvChad
+            config = "require('configs/nvim-web-devicons')"
+        })
+
         -- use({ 'TimUntersberger/neogit', requires = 'nvim-lua/plenary.nvim', config = "require('configs/neogit')" })
         if PACKER_BOOTSTRAP then
             require("packer").sync()
