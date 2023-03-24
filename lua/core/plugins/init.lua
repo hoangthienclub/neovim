@@ -115,8 +115,8 @@ return packer.startup(
         use {"iamcco/markdown-preview.nvim"}
 
         -- Themes
-        -- use {"catppuccin/nvim", as = "catppuccin", config = "require('configs/catppuccin')"}
-        use({"monsonjeremy/onedark.nvim", branch = "treesitter", config = "require('configs/colorscheme')"})
+        use {"catppuccin/nvim", as = "catppuccin", config = "require('configs/catppuccin')"}
+        -- use({"monsonjeremy/onedark.nvim", branch = "treesitter", config = "require('configs/colorscheme')"})
 
         --
         use({
@@ -136,6 +136,9 @@ return packer.startup(
 
         use {
             'jghauser/mkdir.nvim'
+        }
+        use {
+            'rcarriga/nvim-notify'
         }
         if PACKER_BOOTSTRAP then
             require("packer").sync()
