@@ -131,7 +131,7 @@ return packer.startup(
         })
 
         use({ 'TimUntersberger/neogit', requires = 'nvim-lua/plenary.nvim', config = "require('configs/neogit')" })
-        use 'adelarsq/neoline.vim'
+        -- use 'adelarsq/neoline.vim'
         use {'ojroques/nvim-hardline', config = "require('configs/nvim-hardline')"}
 
         use {
